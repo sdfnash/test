@@ -12,7 +12,7 @@ import java.util.List;
  * Created by sdfnash on 2017/3/13.
  */
 
-public class BaseAdapter<T, V extends BaseViewHolder> extends RecyclerView.Adapter<V> {
+public abstract class BaseAdapter<T, V extends BaseViewHolder> extends RecyclerView.Adapter<V> {
     List<T> list;
     Context context;
     LayoutInflater inflater;
@@ -36,6 +36,8 @@ public class BaseAdapter<T, V extends BaseViewHolder> extends RecyclerView.Adapt
     public int getItemCount() {
         return list == null ? 0 : list.size();
     }
+
+    public abstract V getViewHolder(ViewGroup parent, int viewType);
 
 
 }

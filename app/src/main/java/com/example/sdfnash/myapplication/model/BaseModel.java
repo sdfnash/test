@@ -1,4 +1,4 @@
-package com.example.sdfnash.myapplication;
+package com.example.sdfnash.myapplication.model;
 
 import java.io.Serializable;
 

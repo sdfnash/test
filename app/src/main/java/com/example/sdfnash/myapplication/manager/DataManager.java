@@ -1,4 +1,4 @@
-package com.example.sdfnash.myapplication;
+package com.example.sdfnash.myapplication.manager;
 
 import java.util.ArrayList;
 
