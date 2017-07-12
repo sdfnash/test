@@ -19,6 +19,7 @@
             app:contentScrim="?attr/colorPrimary"
             app:expandedTitleMarginEnd="64dp"
             app:expandedTitleMarginStart="48dp"
+            app:title="wowowowo"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <ImageView
@@ -49,6 +50,19 @@
 
     </android.support.v7.widget.RecyclerView>
 
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="50dp"
+        android:src="@mipmap/ic_launcher"
+        app:borderWidth="2dp"
+        app:fabSize="normal"
+        app:backgroundTint="@color/colorPrimary"
+        app:rippleColor="@color/colorAccent"
+        />
     <!--<android.support.v4.widget.NestedScrollView-->
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="match_parent"-->

@@ -1,9 +1,11 @@
 package com.example.sdfnash.myapplication.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IntDef;
 import android.support.annotation.IntRange;
 import android.support.annotation.StringRes;
+import android.support.design.widget.Snackbar;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -38,6 +40,12 @@ public class Main2Activity extends AppCompatActivity {
         StatusBarUtil.setColorNoTranslucentForDrawerLayout(this,drawerLayout,getResources().getColor(R.color.colorAccent));
         setDuration(1);
         setText(R.string.app_name);
+        Snackbar.make(listView, "hrllo", 50000).setAction("click", new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Main2Activity.this, Main2Activity.class));
+            }
+        }).show();
     }
 
     public <T extends View> T findView(int id) {
@@ -45,7 +53,7 @@ public class Main2Activity extends AppCompatActivity {
     }
 
 
-    public void setDuration(@Duration(getDuration = 1) int w){
+    public void setDuration(@Duration int w){
 //        Duration duration=(Duration) Main2Activity.class.getAnnotation(Duration.class);
 //        duration.getDuration();
     }
@@ -58,7 +66,7 @@ public class Main2Activity extends AppCompatActivity {
     @IntRange(from = 1,to = 10)
     @Retention(RetentionPolicy.SOURCE)
     public @interface Duration {
-        int getDuration();
+
     }
 
     public static final int LENGTH_INDEFINITE = -2;
